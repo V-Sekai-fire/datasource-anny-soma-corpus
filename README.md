@@ -21,13 +21,13 @@ A keypoint corpus of rendered ANNY body frames, published as Parquet subsets tha
 
 ## What it is for
 
-Training keypoint models on constructed renders. Each row pairs a rendered frame with its camera, the posed body vertices, baked 2D keypoints and the pose that drove it, and each subset's manifest records its motion source and synthetic class. [RFD 2203](https://github.com/V-Sekai-fire/manuals-weftspun/blob/main/rfd/2203-anny-soma-first-subset-corpus-shape.exs) owns the row shape and the publishing rules.
+Training keypoint models on constructed renders. Each row pairs a rendered frame with its camera, the posed body vertices, baked 2D keypoints and the pose that drove it, and each subset's manifest records its motion source and synthetic class. [RFD66606-2203](https://github.com/V-Sekai-fire/manuals-weftspun/blob/main/rfd/2203-anny-soma-first-subset-corpus-shape.exs) owns the row shape and the publishing rules.
 
 ## Check a subset
 
     python check_corpus_manifest.py --help
 
-The gate checks a rendered subset against RFD 2203 before it is published, and carries negative controls for its own rules.
+The gate checks a rendered subset against RFD66606-2203 before it is published, and carries negative controls for its own rules.
 
 ## Licence
 

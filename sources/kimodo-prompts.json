@@ -1,5 +1,5 @@
 {
-  "$schema_note": "Prompt set for the corpus's `kimodo` motion source per RFD 2203. Each entry is a licence-clean text prompt authored by weftspun (no third-party motion names, no branded exemplars per CLAUDE.md's trademark rule), plus a per-prompt seed and target duration. The renderer's `_run_upstream` reads this file, feeds each prompt to Kimodo at the specified seed and duration, and produces the .npz frames per prompt. Every subset rendered from this source carries `motion_source=kimodo` + `synthetic_class=constructed-renders-over-generated-poses` and CLAUDE.md's four generated-synthetic conditions bind.",
+  "$schema_note": "Prompt set for the corpus's `kimodo` motion source per RFD66606-2203. Each entry is a licence-clean text prompt authored by weftspun (no third-party motion names, no branded exemplars per CLAUDE.md's trademark rule), plus a per-prompt seed and target duration. The renderer's `_run_upstream` reads this file, feeds each prompt to Kimodo at the specified seed and duration, and produces the .npz frames per prompt. Every subset rendered from this source carries `motion_source=kimodo` + `synthetic_class=constructed-renders-over-generated-poses` and CLAUDE.md's four generated-synthetic conditions bind.",
   "motion_source": {
     "name": "kimodo",
     "synthetic_class": "constructed-renders-over-generated-poses",
@@ -13,7 +13,7 @@
     "guidance_scale": 3.5,
     "temperature": 1.0,
     "target_fps": 30,
-    "notes": "sampler_config recorded per shard as manifest.sampler_config.kimodo (a sub-object under the existing sampler_config with the Mitsuba knobs). Any refinement subset that swaps the checkpoint or changes the sampler knobs is a new commit set with prior hash cited, per RFD 2203 living-dataset doctrine."
+    "notes": "sampler_config recorded per shard as manifest.sampler_config.kimodo (a sub-object under the existing sampler_config with the Mitsuba knobs). Any refinement subset that swaps the checkpoint or changes the sampler knobs is a new commit set with prior hash cited, per RFD66606-2203 living-dataset doctrine."
   },
   "prompts": {
     "$note": "Categorised so a subset can subselect (e.g. subset-01 uses only 'locomotion' + 'transitions'; subset-02 adds 'gestures'). Category is recorded in the shard's manifest under motion_source.categories.",
@@ -57,7 +57,7 @@
   },
   "provenance": {
     "condition_1_generator": "Kimodo-SOMA-RP-v1.1 checkpoint (NVIDIA Open Model License) invoked at the per-prompt seed above; each shard's manifest records the checkpoint hash + the prompt text + the seed under sampler_config.kimodo",
-    "condition_2_stored_separately": "this file names motion_source=kimodo; the shard manifest's motion_source field records it, distinct from any anny-tpose-sweep subset per RFD 2203 living-dataset doctrine",
+    "condition_2_stored_separately": "this file names motion_source=kimodo; the shard manifest's motion_source field records it, distinct from any anny-tpose-sweep subset per RFD66606-2203 living-dataset doctrine",
     "condition_3_not_sole_distribution": "the corpus MUST also carry at least one anny-tpose-sweep (constructed-pose) subset before any training run consumes it. `check_corpus_manifest.py` asserts this at corpus level (task 3 gate extension)",
     "condition_4_evaluation_on_real_or_constructed": "blinded holdout coco_person_commercial_val2017 remains the evaluation set per CLAUDE.md; kimodo subsets are training-only"
   },

@@ -1,5 +1,5 @@
 {
-  "$schema_note": "Anatomy-based joint range-of-motion envelope for the `anny-tpose-sweep` motion source per RFD 2203. Every entry names the axis, min/max in degrees, and the specific verified public-domain source (document, section, table, page). The sweep's ranges MUST sit inside this envelope; a deliberately hyperextended range fails the gate. When RFD 0007's per-pose validator lands, it also reads this envelope.",
+  "$schema_note": "Anatomy-based joint range-of-motion envelope for the `anny-tpose-sweep` motion source per RFD66606-2203. Every entry names the axis, min/max in degrees, and the specific verified public-domain source (document, section, table, page). The sweep's ranges MUST sit inside this envelope; a deliberately hyperextended range fails the gate. When RFD66606-0007's per-pose validator lands, it also reads this envelope.",
   "envelope_source": "NASA RP-1024 Vol.I Chapter VI Tables 1 and 2",
   "licence_verified": true,
   "licence_verification": {
