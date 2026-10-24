@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-title: "anny-soma-corpus: ANNY-SOMA keypoint corpus for RFD 1173"
+title: "anny-soma-corpus: ANNY-SOMA keypoint corpus for RFD66606-1173"
 message: >-
   If you use this dataset, please cite it and the upstream sources
   listed under `references`.
@@ -18,13 +18,13 @@ repository-code: https://github.com/weftspun/anny-soma-corpus
 identifiers:
   - type: other
     value: urn:oid:1.3.6.1.4.1.66606.1.2.2203
-    description: RFD 2203 (first-subset row shape for the ANNY-SOMA keypoint corpus)
+    description: RFD66606-2203 (first-subset row shape for the ANNY-SOMA keypoint corpus)
   - type: other
     value: urn:oid:1.3.6.1.4.1.66606.1.2.1173
-    description: RFD 1173 (a multimodal diffusion pipeline; parent RFD)
+    description: RFD66606-1173 (a multimodal diffusion pipeline; parent RFD)
   - type: other
     value: urn:oid:1.3.6.1.4.1.66606.1.2.2196
-    description: RFD 2196 (HuggingFace dataset viewer rules)
+    description: RFD66606-2196 (HuggingFace dataset viewer rules)
 keywords:
   - keypoints
   - motion
@@ -59,7 +59,7 @@ references:
       Kimodo emits (T, 77, 3, 3) local rotation matrices which are
       converted to axis-angle rotvecs; anny prepends one root identity
       at call time to reach 78 pose parameters (task #76 for the
-      disambiguation of 77-vs-78 across RFDs 1102/1173/2162).
+      disambiguation of 77-vs-78 across RFD66606-1102/1173/2162).
   # Pixal3D -- Apache-2.0 (courtesy citation; the view-schedule origin)
   - type: software
     title: "pixal3d"
@@ -87,16 +87,16 @@ references:
       motion filter over the 52 facial-action blendshapes, filtered
       against SOMA_wrap's excluded-vertex set. Each subset's manifest
       records which SHA of wholebody133.pth it was baked against.
-  # RFD 2203 -- the row shape decision
+  # RFD66606-2203 -- the row shape decision
   - type: generic
-    title: "RFD 2203: The first-subset row shape for the anny-soma keypoint corpus"
+    title: "RFD66606-2203: The first-subset row shape for the anny-soma keypoint corpus"
     url: https://github.com/weftspun/request-for-discussion/tree/main/rfd/2203-anny-soma-first-subset-corpus-shape
     notes: Row shape and publish path are decided here.
-  # RFD 1173 -- the parent pipeline this feeds
+  # RFD66606-1173 -- the parent pipeline this feeds
   - type: generic
-    title: "RFD 1173: A multimodal diffusion pipeline"
+    title: "RFD66606-1173: A multimodal diffusion pipeline"
     url: https://github.com/weftspun/request-for-discussion/tree/main/rfd/1173-a-multimodal-diffusion-pipeline
-    notes: This corpus feeds the RFD 1173 keypoints stub.
+    notes: This corpus feeds the RFD66606-1173 keypoints stub.
   # NASA RP-1024 -- public-domain anatomical ROM source for the anny-tpose-sweep joint envelope
   - type: report
     title: "Anthropometric Source Book, Volume I: Anthropometry for Designers"
@@ -124,8 +124,8 @@ references:
       the underlying Harris 1969 rows requires Taylor & Francis
       compliance. Re-source from a PD-clean publication tracked in
       issue #12.
-  # RFD 2196 -- the HF publishing rules
+  # RFD66606-2196 -- the HF publishing rules
   - type: generic
-    title: "RFD 2196: HuggingFace dataset viewer rules"
+    title: "RFD66606-2196: HuggingFace dataset viewer rules"
     url: https://github.com/weftspun/request-for-discussion/tree/main/rfd/2196-huggingface-dataset-viewer-rules
     notes: Publish path (LFS + hf_transfer, xet disabled, hf upload-large-folder) per rule 5.

@@ -1,6 +1,6 @@
-"""Gate the anny-soma-corpus render output against RFD 2203.
+"""Gate the anny-soma-corpus render output against RFD66606-2203.
 
-Every rule below is stated in RFD 2203 (`rfd/2203-anny-soma-first-subset-corpus-shape/`
+Every rule below is stated in RFD66606-2203 (`rfd/2203-anny-soma-first-subset-corpus-shape/`
 in the manuals repo); this script is the machine-checked companion so a document rule
 and a gate cannot drift. Self-test carries a negative control per rule, so a gate that
 passes on known-broken input surfaces its own defect rather than certifying it.
@@ -41,7 +41,7 @@ SYNTHETIC_CLASS_FOR = {
     "kimodo": "generated",
 }
 # Rule-3 fields on every subset manifest. `hand-picked` and `none` are legal explicit
-# values until an anatomy-based joint envelope and RFD 0007's per-pose validator exist;
+# values until an anatomy-based joint envelope and RFD66606-0007's per-pose validator exist;
 # what the gate forbids is silence about them (a missing field reads exactly like a pass).
 SWEEP_RANGES_VALUES = ("hand-picked", "anatomy-rom-envelope")
 ENVELOPE_SOURCE_PATH = pathlib.Path(__file__).parent / "sources" / "anatomy-rom-envelope.json"

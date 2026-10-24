@@ -1,5 +1,5 @@
 {
-  "$schema_note": "Constructed motion-source descriptor for the corpus's `anny-tpose-sweep` subset per RFD 2203. Satisfies CLAUDE.md's generated-synthetic condition 3 for the corpus as a whole: the corpus must carry at least one constructed-pose subset before any training run consumes it. The renderer reads this file to know which base rest poses to render, and how to procedurally build parameterised variations from them.",
+  "$schema_note": "Constructed motion-source descriptor for the corpus's `anny-tpose-sweep` subset per RFD66606-2203. Satisfies CLAUDE.md's generated-synthetic condition 3 for the corpus as a whole: the corpus must carry at least one constructed-pose subset before any training run consumes it. The renderer reads this file to know which base rest poses to render, and how to procedurally build parameterised variations from them.",
   "motion_source": {
     "name": "anny-tpose-sweep",
     "synthetic_class": "constructed",
@@ -53,7 +53,7 @@
   },
   "renderer_hook": {
     "consumed_by": "6-datasource/anny-soma-corpus/render_first_subset.py --motion-source anny-tpose-sweep --source-manifest sources/anny-tpose-sweep.json",
-    "expected_row_shape": "RFD 2203 hybrid row unchanged; anny_posed_vertices is computed by anny.Anny(rig='soma', topology=TopologyConfig(base_mesh='makehuman', remove_unattached_vertices=False))(pose_parameters=constructed_from_base_and_sweep, ...); soma_pose is the per-frame (77, 3) rotvec array the sweep constructed"
+    "expected_row_shape": "RFD66606-2203 hybrid row unchanged; anny_posed_vertices is computed by anny.Anny(rig='soma', topology=TopologyConfig(base_mesh='makehuman', remove_unattached_vertices=False))(pose_parameters=constructed_from_base_and_sweep, ...); soma_pose is the per-frame (77, 3) rotvec array the sweep constructed"
   },
   "provenance": {
     "condition_1_generator": "n/a (no generator; deterministic parameter sweep from CC0 rest poses)",
